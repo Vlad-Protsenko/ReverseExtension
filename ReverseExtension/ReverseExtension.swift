@@ -160,7 +160,7 @@ extension UITableView {
         // MARK: - UITableView configuration
         private func configureTableView(_ tableView: UITableView) {
             if tableView.transform == CGAffineTransform.identity {
-                tableView.transform = CGAffineTransform.identity.rotated(by: .pi)
+                tableView.transform = CGAffineTransform.identity.scaledBy(x: 1, y: -1)
             }
             _ = contentInsetObservation
         }
@@ -197,7 +197,7 @@ extension UITableView {
                 if view.transform == CGAffineTransform.identity {
                     DispatchQueue.main.async {
                         //UIView.setAnimationsEnabled(false)
-                        view.transform = CGAffineTransform.identity.rotated(by: .pi)
+                        view.transform = CGAffineTransform.identity.scaledBy(x: 1, y: -1)
                         //UIView.setAnimationsEnabled(true)
                     }
                 }
@@ -377,7 +377,7 @@ extension UITableView.ReverseExtension: UITableViewDelegate {
         
         if cell.contentView.transform == CGAffineTransform.identity {
             UIView.setAnimationsEnabled(false)
-            cell.contentView.transform = CGAffineTransform.identity.rotated(by: .pi)
+            cell.contentView.transform = CGAffineTransform.identity.scaledBy(x: 1, y: -1)
             UIView.setAnimationsEnabled(true)
         }
     }
@@ -385,7 +385,7 @@ extension UITableView.ReverseExtension: UITableViewDelegate {
     public func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         if view.transform == CGAffineTransform.identity {
             UIView.setAnimationsEnabled(false)
-            view.transform = CGAffineTransform.identity.rotated(by: .pi)
+            view.transform = CGAffineTransform.identity.scaledBy(x: 1, y: -1)
             UIView.setAnimationsEnabled(true)
         }
     }
@@ -393,7 +393,7 @@ extension UITableView.ReverseExtension: UITableViewDelegate {
     public func tableView(_ tableView: UITableView, willDisplayFooterView view: UIView, forSection section: Int) {
         if view.transform == CGAffineTransform.identity {
             UIView.setAnimationsEnabled(false)
-            view.transform = CGAffineTransform.identity.rotated(by: .pi)
+            view.transform = CGAffineTransform.identity.scaledBy(x: 1, y: -1)
             UIView.setAnimationsEnabled(true)
         }
     }
