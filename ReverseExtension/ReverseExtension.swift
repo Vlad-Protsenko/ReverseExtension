@@ -187,7 +187,6 @@ extension UITableView {
             let scrollIndicatorInsets = base.scrollIndicatorInsets
             base.scrollIndicatorInsets.bottom = scrollIndicatorInsets.top
             base.scrollIndicatorInsets.top = scrollIndicatorInsets.bottom
-            base.scrollIndicatorInsets.right = base.bounds.size.width - 8
             self.lastScrollIndicatorInsets = base.scrollIndicatorInsets
         }
         
