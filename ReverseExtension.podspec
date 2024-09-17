@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   last_commit = `git rev-list --tags --max-count=1`.strip
-  last_tag = `git describe --tags #{last_commit}`.strip
+  last_tag = `git describe --tags --always #{last_commit}`.strip
 
   s.name             = 'ReverseExtension'
   s.version          = '0.5.1'
